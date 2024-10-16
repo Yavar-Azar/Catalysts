@@ -1,4 +1,4 @@
-Catalyst Design: DFT & Machine Learning Approaches
+Introduction
 =============================================================
 
 This repository collects my personal experience and knowledge on catalyst design, 

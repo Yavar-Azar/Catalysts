@@ -10,7 +10,8 @@ Welcome to Catalysts's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   intro/introduction.rst
+   intro/introduction
+   basics/basics
 
 
 
