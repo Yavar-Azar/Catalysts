@@ -12,6 +12,7 @@ Welcome to Catalysts's documentation!
 
    intro/introduction
    basics/basics
+   atomistics/atomistics
 
 
 
