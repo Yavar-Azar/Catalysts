@@ -1,0 +1,570 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Basics Overview &#8212; Catalysts 0.1.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=a1637f0b"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'basics/basics';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Applications of Atomistic Modeling in Catalysis" href="../atomistics/atomistics.html" />
+    <link rel="prev" title="Introduction" href="../intro/introduction.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Catalysts 0.1.0 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../intro/introduction.html">Introduction</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Basics Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atomistics/atomistics.html">Applications of Atomistic Modeling in Catalysis</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/basics/basics.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Basics Overview</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#catalyst-definition">Catalyst Definition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-catalysts">Types of Catalysts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#catalysis-mechanism">Catalysis Mechanism</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kinetics-of-catalysis">Kinetics of Catalysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#turnover-concepts">Turnover Concepts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#catalytic-efficiency">Catalytic Efficiency</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#catalytic-cycle">Catalytic Cycle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enzymatic-catalysis">Enzymatic Catalysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="basics-overview">
+<h1>Basics Overview<a class="headerlink" href="#basics-overview" title="Link to this heading">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>Catalysis is a fundamental process in chemical reactions where a substance known as a <strong>catalyst</strong> accelerates the reaction rate without being consumed in the reaction itself. Catalysts are crucial for increasing the efficiency of chemical processes by lowering the energy barriers for reactions, thereby enabling faster reaction rates at lower temperatures and pressures. This is critical in many industrial, biological, and environmental processes.</p>
+</section>
+<section id="catalyst-definition">
+<h2>Catalyst Definition<a class="headerlink" href="#catalyst-definition" title="Link to this heading">#</a></h2>
+<p>A <strong>catalyst</strong> is a substance that:</p>
+<ul class="simple">
+<li><p>Increases the rate of a chemical reaction by providing an alternative reaction pathway with lower activation energy.</p></li>
+<li><p>Does not undergo a permanent chemical change during the reaction.</p></li>
+<li><p>Can repeatedly facilitate multiple reaction cycles.</p></li>
+</ul>
+<p>The presence of a catalyst modifies the reaction kinetics without affecting the equilibrium position of the reaction.</p>
+</section>
+<section id="types-of-catalysts">
+<h2>Types of Catalysts<a class="headerlink" href="#types-of-catalysts" title="Link to this heading">#</a></h2>
+<p>Catalysts can be broadly classified into the following categories based on their phase relative to the reactants:</p>
+<ol class="arabic simple">
+<li><p><strong>Heterogeneous Catalysts</strong>:
+- The catalyst exists in a different phase than the reactants, typically a solid catalyst with liquid or gas reactants. An example is the catalytic converter in vehicles, which uses solid platinum or palladium to catalyze the conversion of exhaust gases.</p></li>
+<li><p><strong>Homogeneous Catalysts</strong>:
+- The catalyst is in the same phase as the reactants, usually in a solution. A common example is acid or base catalysis in aqueous solutions.</p></li>
+<li><p><strong>Enzymes</strong>:
+- Biological catalysts, which are proteins that speed up biochemical reactions. Enzymes exhibit high specificity and operate under mild conditions within living organisms.</p></li>
+</ol>
+</section>
+<section id="catalysis-mechanism">
+<h2>Catalysis Mechanism<a class="headerlink" href="#catalysis-mechanism" title="Link to this heading">#</a></h2>
+<p>The basic mechanism of catalysis involves several key steps that depend on whether the catalyst is homogeneous or heterogeneous. The overall goal of the catalyst is to lower the activation energy, allowing more reactant molecules to overcome the energy barrier and form products.</p>
+<ol class="arabic simple">
+<li><p><strong>Adsorption</strong>: For heterogeneous catalysis, the reactants bind to the surface of the catalyst, usually involving physical or chemical adsorption.</p></li>
+<li><p><strong>Reaction Pathway</strong>: The catalyst provides an alternative reaction pathway with a lower activation energy than the uncatalyzed reaction. This can occur through various mechanisms such as bond weakening, facilitating the formation of intermediates, or stabilizing transition states.</p></li>
+<li><p><strong>Desorption</strong>: The products of the reaction are released from the catalyst surface, regenerating the catalyst for further reaction cycles.</p></li>
+</ol>
+</section>
+<section id="kinetics-of-catalysis">
+<h2>Kinetics of Catalysis<a class="headerlink" href="#kinetics-of-catalysis" title="Link to this heading">#</a></h2>
+<p>The kinetics of catalysis can be described by several key parameters, which are used to determine how efficiently a catalyst works:</p>
+<ol class="arabic">
+<li><p><strong>Rate Law</strong>: In catalysis, the rate of reaction is often modified by the presence of a catalyst. For a general reaction:</p>
+<div class="math notranslate nohighlight">
+\[A + B \rightarrow C\]</div>
+<p>The rate law for the catalyzed reaction is given by:</p>
+<div class="math notranslate nohighlight">
+\[r_{\text{cat}} = k_{\text{cat}} [A]^{m} [B]^{n}\]</div>
+<p>Where:
+- <span class="math notranslate nohighlight">\(r_{\text{cat}}\)</span> = Reaction rate for the catalyzed reaction
+- <span class="math notranslate nohighlight">\(k_{\text{cat}}\)</span> = Rate constant for the catalyzed reaction
+- <span class="math notranslate nohighlight">\([A]\)</span>, <span class="math notranslate nohighlight">\([B]\)</span> = Concentrations of reactants
+- <span class="math notranslate nohighlight">\(m\)</span>, <span class="math notranslate nohighlight">\(n\)</span> = Reaction orders with respect to reactants A and B</p>
+</li>
+<li><p><strong>Activation Energy</strong>: A catalyst lowers the activation energy (<span class="math notranslate nohighlight">\(E_{\text{a}}\)</span>) of the reaction, which increases the rate of reaction according to the Arrhenius equation:</p>
+<div class="math notranslate nohighlight">
+\[k_{\text{cat}} = A e^{-E_{\text{a, cat}} / RT}\]</div>
+<p>Where:
+- <span class="math notranslate nohighlight">\(k_{\text{cat}}\)</span> = Rate constant for the catalyzed reaction
+- <span class="math notranslate nohighlight">\(A\)</span> = Pre-exponential factor (frequency factor)
+- <span class="math notranslate nohighlight">\(E_{\text{a, cat}}\)</span> = Activation energy of the catalyzed reaction
+- <span class="math notranslate nohighlight">\(R\)</span> = Universal gas constant
+- <span class="math notranslate nohighlight">\(T\)</span> = Temperature</p>
+<p>Lowering the activation energy increases the number of molecules that can overcome the energy barrier at a given temperature, thus increasing the rate.</p>
+</li>
+</ol>
+</section>
+<section id="turnover-concepts">
+<h2>Turnover Concepts<a class="headerlink" href="#turnover-concepts" title="Link to this heading">#</a></h2>
+<p>Turnover is a critical concept in catalysis, especially in measuring the efficiency and productivity of a catalyst. Two main terms are used: <strong>Turnover Number (TON)</strong> and <strong>Turnover Frequency (TOF)</strong>.</p>
+<ol class="arabic">
+<li><p><strong>Turnover Number (TON)</strong>:
+- The TON is defined as the number of moles of reactant converted per mole of catalyst before the catalyst becomes deactivated or consumed.</p>
+<div class="math notranslate nohighlight">
+\[\text{TON} = \frac{\text{Number of moles of product}}{\text{Number of moles of catalyst}}\]</div>
+<p>A higher TON indicates a more efficient catalyst, as it can facilitate a larger number of reactions before deactivation.</p>
+</li>
+<li><p><strong>Turnover Frequency (TOF)</strong>:
+- TOF is a measure of the catalytic activity per unit time, representing how many catalytic cycles occur per unit time.</p>
+<div class="math notranslate nohighlight">
+\[\text{TOF} = \frac{\text{Number of catalytic cycles}}{\text{Time}}\]</div>
+<p>TOF provides insight into the rate at which the catalyst operates. It is typically measured in units of <span class="math notranslate nohighlight">\(\text{s}^{-1}\)</span>.</p>
+</li>
+</ol>
+</section>
+<section id="catalytic-efficiency">
+<h2>Catalytic Efficiency<a class="headerlink" href="#catalytic-efficiency" title="Link to this heading">#</a></h2>
+<p>The overall efficiency of a catalyst can be described by the relationship between the catalyst’s activity, the number of active sites, and how quickly the catalyst can perform its function. This is often expressed as the <strong>specific activity</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\text{Specific Activity} = \frac{\text{Turnover Rate (TOF)}}{\text{Number of Active Sites}}\]</div>
+<p>Where the number of active sites refers to the total sites on the catalyst that are available for the reaction.</p>
+</section>
+<section id="catalytic-cycle">
+<h2>Catalytic Cycle<a class="headerlink" href="#catalytic-cycle" title="Link to this heading">#</a></h2>
+<p>In many catalytic systems, reactions proceed via a <strong>catalytic cycle</strong>. A catalytic cycle generally involves several discrete steps:</p>
+<ol class="arabic simple">
+<li><p><strong>Activation</strong>: The catalyst binds to the reactants or interacts with them, initiating the reaction.</p></li>
+<li><p><strong>Intermediate Formation</strong>: In many catalytic cycles, intermediate species are formed that are more reactive than the original reactants. These intermediates often have lower energy than the transition state in the uncatalyzed reaction.</p></li>
+<li><p><strong>Product Formation</strong>: The products are formed as the intermediates are transformed or broken down, completing the reaction.</p></li>
+<li><p><strong>Catalyst Regeneration</strong>: At the end of the cycle, the catalyst is released in its original form and is available to catalyze another reaction cycle.</p></li>
+</ol>
+</section>
+<section id="enzymatic-catalysis">
+<h2>Enzymatic Catalysis<a class="headerlink" href="#enzymatic-catalysis" title="Link to this heading">#</a></h2>
+<p>Enzymatic catalysis, performed by biological catalysts known as enzymes, follows a similar but highly specialized process. Enzymes work by binding to a specific substrate and forming an enzyme-substrate complex, which lowers the activation energy of the reaction.</p>
+<p>The kinetics of enzyme-catalyzed reactions are often modeled using the <strong>Michaelis-Menten equation</strong>:</p>
+<div class="math notranslate nohighlight">
+\[v = \frac{V_{\max} [S]}{K_m + [S]}\]</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(v\)</span> = Initial rate of reaction</p></li>
+<li><p><span class="math notranslate nohighlight">\(V_{\max}\)</span> = Maximum rate of reaction at saturating substrate concentration</p></li>
+<li><p><span class="math notranslate nohighlight">\([S]\)</span> = Substrate concentration</p></li>
+<li><p><span class="math notranslate nohighlight">\(K_m\)</span> = Michaelis constant, representing the substrate concentration at which the reaction rate is half of <span class="math notranslate nohighlight">\(V_{\max}\)</span></p></li>
+</ul>
+<p>This equation describes how the reaction rate depends on the substrate concentration and provides key insights into enzyme efficiency and affinity for the substrate.</p>
+</section>
+<section id="applications">
+<h2>Applications<a class="headerlink" href="#applications" title="Link to this heading">#</a></h2>
+<p>Catalysts play a critical role in many industrial, environmental, and biological processes:</p>
+<ol class="arabic simple">
+<li><p><strong>Industrial Catalysis</strong>: Catalysts are used in the production of essential chemicals, such as ammonia in the Haber process, and in petroleum refining through catalytic cracking and hydrodesulfurization.</p></li>
+<li><p><strong>Environmental Catalysis</strong>: Catalysts are essential in pollution control technologies, such as catalytic converters in cars, which reduce harmful emissions by converting nitrogen oxides and hydrocarbons into less harmful substances.</p></li>
+<li><p><strong>Biocatalysis</strong>: Enzymes are used in pharmaceuticals, food processing, and biofuel production, enabling reactions that are highly specific and efficient under mild conditions.</p></li>
+</ol>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
+<p>Catalysts are indispensable in modern chemistry and industry, where they enhance the efficiency of chemical reactions by lowering activation energies and increasing reaction rates. Understanding the mechanisms, kinetics, and turnover concepts of catalysis enables the design of better, more efficient catalytic systems for a wide range of applications.</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../intro/introduction.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Introduction</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../atomistics/atomistics.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Applications of Atomistic Modeling in Catalysis</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#catalyst-definition">Catalyst Definition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-catalysts">Types of Catalysts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#catalysis-mechanism">Catalysis Mechanism</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kinetics-of-catalysis">Kinetics of Catalysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#turnover-concepts">Turnover Concepts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#catalytic-efficiency">Catalytic Efficiency</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#catalytic-cycle">Catalytic Cycle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enzymatic-catalysis">Enzymatic Catalysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Yavar
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Yavar.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

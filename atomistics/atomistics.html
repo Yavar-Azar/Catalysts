@@ -1,0 +1,525 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Applications of Atomistic Modeling in Catalysis &#8212; Catalysts 0.1.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=a1637f0b"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'atomistics/atomistics';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Basics Overview" href="../basics/basics.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Catalysts 0.1.0 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../intro/introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/basics.html">Basics Overview</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Applications of Atomistic Modeling in Catalysis</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/atomistics/atomistics.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Applications of Atomistic Modeling in Catalysis</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#density-functional-theory-dft">Density Functional Theory (DFT)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-of-dft-in-catalysis">Applications of DFT in Catalysis</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-dynamics-md">Molecular Dynamics (MD)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-of-md-in-catalysis">Applications of MD in Catalysis</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combined-dft-and-md-approaches">Combined DFT and MD Approaches</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-of-dft-and-md-combined-in-catalysis">Applications of DFT and MD Combined in Catalysis</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges-and-future-prospects">Challenges and Future Prospects</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="applications-of-atomistic-modeling-in-catalysis">
+<h1>Applications of Atomistic Modeling in Catalysis<a class="headerlink" href="#applications-of-atomistic-modeling-in-catalysis" title="Link to this heading">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>Atomistic modeling has become an indispensable tool in understanding and designing catalytic processes. By providing molecular-level insights, these computational approaches complement experimental data, allowing for the study of complex catalytic systems under a variety of conditions. The two most widely used atomistic modeling techniques in catalysis are <strong>Density Functional Theory (DFT)</strong> and <strong>Molecular Dynamics (MD)</strong>. Each of these methods plays a critical role in the investigation of reaction mechanisms, catalyst design, and catalytic performance optimization.</p>
+</section>
+<section id="density-functional-theory-dft">
+<h2>Density Functional Theory (DFT)<a class="headerlink" href="#density-functional-theory-dft" title="Link to this heading">#</a></h2>
+<p><strong>Density Functional Theory (DFT)</strong> is a quantum mechanical modeling method used to investigate the electronic structure of atoms, molecules, and solids. In catalysis, DFT is particularly valuable for studying the properties of catalytic surfaces, reaction mechanisms, and energy landscapes.</p>
+<section id="applications-of-dft-in-catalysis">
+<h3>Applications of DFT in Catalysis<a class="headerlink" href="#applications-of-dft-in-catalysis" title="Link to this heading">#</a></h3>
+<ol class="arabic">
+<li><p><strong>Catalyst Surface Analysis</strong>:
+DFT is widely used to study the interaction between reactants and catalyst surfaces. By calculating the electronic structure of atoms on the surface, DFT allows researchers to predict adsorption energies, surface stability, and active sites for various catalytic reactions. This helps in understanding how catalysts function at the atomic level.</p></li>
+<li><p><strong>Reaction Pathways and Energy Barriers</strong>:
+One of the most important applications of DFT in catalysis is the calculation of reaction pathways and energy barriers. DFT can be used to determine the activation energy of elementary reaction steps, which provides insights into the rate-determining steps of catalytic reactions. This is crucial for optimizing catalyst performance.</p>
+<div class="math notranslate nohighlight">
+\[\Delta E_a = E_{\text{TS}} - E_{\text{reactants}}\]</div>
+<p>Where:
+- <span class="math notranslate nohighlight">\(\Delta E_a\)</span> = Activation energy
+- <span class="math notranslate nohighlight">\(E_{\text{TS}}\)</span> = Energy of the transition state
+- <span class="math notranslate nohighlight">\(E_{\text{reactants}}\)</span> = Energy of the reactants</p>
+</li>
+<li><p><strong>Catalyst Design and Screening</strong>:
+DFT enables the screening of different catalyst materials (e.g., metals, metal oxides, alloys) to identify promising candidates for a specific reaction. By simulating the catalytic activity of various materials, DFT helps in predicting which materials might offer superior catalytic performance or stability.</p></li>
+<li><p><strong>Electronic Structure and Activity Correlation</strong>:
+DFT also allows for the investigation of how the electronic structure of a catalyst affects its activity. Concepts like the <strong>d-band center</strong> and <strong>Fermi level</strong> are frequently used to understand how surface electronic properties correlate with catalytic performance.</p>
+<ul class="simple">
+<li><p><strong>d-band theory</strong>: The position of the d-band center relative to the Fermi level can indicate the strength of the interaction between the catalyst and adsorbates. Catalysts with d-band centers closer to the Fermi level tend to bind reactants more strongly.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+<section id="molecular-dynamics-md">
+<h2>Molecular Dynamics (MD)<a class="headerlink" href="#molecular-dynamics-md" title="Link to this heading">#</a></h2>
+<p><strong>Molecular Dynamics (MD)</strong> is a classical simulation method that computes the time evolution of a system of atoms based on Newton’s laws of motion. While DFT focuses on electronic structures at a static state, MD simulates the dynamic behavior of atoms and molecules over time, making it particularly useful for studying temperature-dependent phenomena and catalytic processes that involve complex movements of atoms.</p>
+<section id="applications-of-md-in-catalysis">
+<h3>Applications of MD in Catalysis<a class="headerlink" href="#applications-of-md-in-catalysis" title="Link to this heading">#</a></h3>
+<ol class="arabic">
+<li><p><strong>Catalyst Stability and Structural Dynamics</strong>:
+MD simulations are used to study the dynamic behavior of catalysts, including structural changes under operational conditions such as high temperatures and pressures. This is particularly important for understanding <strong>sintering</strong>, a process where catalyst particles coalesce at high temperatures, leading to a loss of active surface area.</p>
+<div class="math notranslate nohighlight">
+\[F = ma\]</div>
+<p>Where:
+- <span class="math notranslate nohighlight">\(F\)</span> = Force acting on atoms
+- <span class="math notranslate nohighlight">\(m\)</span> = Mass of the atom
+- <span class="math notranslate nohighlight">\(a\)</span> = Acceleration of the atom</p>
+</li>
+<li><p><strong>Temperature Effects on Catalytic Reactions</strong>:
+MD simulations allow the exploration of the effect of temperature on catalytic reactions. By tracking atomic positions and velocities over time, MD can simulate how thermal energy influences reaction rates, diffusion of reactants, and desorption of products from catalyst surfaces. This is especially useful for heterogeneous catalysis where high temperatures are often involved.</p></li>
+<li><p><strong>Reactivity and Diffusion on Catalytic Surfaces</strong>:
+MD is employed to study the diffusion of reactants and intermediates on catalytic surfaces, which is important for understanding the kinetics of surface reactions. For example, the mobility of adsorbed species on metallic or oxide surfaces, and how this mobility affects the overall catalytic cycle, can be investigated using MD simulations.</p></li>
+<li><p><strong>Catalysis under Realistic Conditions</strong>:
+MD can simulate catalysis under more realistic, dynamic conditions compared to static DFT calculations. This includes the presence of solvents, fluctuating temperatures, and mechanical stresses that mimic real-world industrial catalytic processes. This helps bridge the gap between idealized theoretical models and actual catalytic environments.</p></li>
+</ol>
+</section>
+</section>
+<section id="combined-dft-and-md-approaches">
+<h2>Combined DFT and MD Approaches<a class="headerlink" href="#combined-dft-and-md-approaches" title="Link to this heading">#</a></h2>
+<p>In recent years, combining <strong>DFT</strong> and <strong>MD</strong> has emerged as a powerful approach for studying catalytic systems. <strong>Ab initio molecular dynamics (AIMD)</strong>, which applies DFT to compute forces in real-time during an MD simulation, allows for the exploration of dynamic phenomena in catalysis while incorporating accurate quantum mechanical descriptions of electronic interactions.</p>
+<section id="applications-of-dft-and-md-combined-in-catalysis">
+<h3>Applications of DFT and MD Combined in Catalysis<a class="headerlink" href="#applications-of-dft-and-md-combined-in-catalysis" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Reaction Mechanism Exploration</strong>:
+AIMD simulations can be used to explore the full catalytic cycle of complex reactions. For example, AIMD can reveal how catalytic intermediates form, diffuse, and transform on the catalyst surface under realistic temperature and pressure conditions.</p></li>
+<li><p><strong>Solvent and Environmental Effects</strong>:
+Solvent effects are difficult to capture using static DFT, but when combined with MD, the influence of the surrounding environment on catalytic activity can be studied. AIMD simulations in the presence of solvents or gases are particularly important for simulating electrochemical catalysis and aqueous-phase reactions.</p></li>
+<li><p><strong>Transition State Search</strong>:
+A combination of DFT and MD is often employed to locate transition states in complex reaction networks. While DFT can calculate the energies and structures of transition states, MD simulations help to dynamically explore the configurational space, which is essential when dealing with large catalytic systems or those involving multiple reaction pathways.</p></li>
+</ol>
+</section>
+</section>
+<section id="challenges-and-future-prospects">
+<h2>Challenges and Future Prospects<a class="headerlink" href="#challenges-and-future-prospects" title="Link to this heading">#</a></h2>
+<p>Although atomistic modeling methods like DFT and MD have revolutionized the field of catalysis, several challenges remain:</p>
+<ul class="simple">
+<li><p><strong>Scaling to Large Systems</strong>: Both DFT and MD simulations are computationally expensive, especially for large systems such as nanoparticles, metal clusters, or complex surface reconstructions. The development of more efficient algorithms and the use of high-performance computing resources are key to overcoming this limitation.</p></li>
+<li><p><strong>Accuracy of Force Fields in MD</strong>: The accuracy of MD simulations depends heavily on the quality of the force fields used to model atomic interactions. While quantum mechanics-based force fields (such as those derived from DFT) can improve accuracy, they are computationally demanding.</p></li>
+<li><p><strong>Incorporation of Machine Learning</strong>: Machine learning techniques are increasingly being integrated with DFT and MD to improve the efficiency of simulations. These methods can help in predicting catalytic properties, guiding the design of new catalysts, and accelerating the exploration of complex reaction mechanisms.</p></li>
+</ul>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
+<p>Atomistic modeling techniques like <strong>DFT</strong> and <strong>MD</strong> have profoundly influenced the field of catalysis by offering insights into reaction mechanisms, catalyst design, and dynamic processes that are difficult to observe experimentally. The combination of these two techniques, particularly in the form of <strong>AIMD</strong>, holds great promise for further advancing the understanding and development of catalytic systems, especially under realistic conditions. Future progress in computational power and machine learning integration will further enhance the application of atomistic modeling in catalysis.</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../basics/basics.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Basics Overview</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#density-functional-theory-dft">Density Functional Theory (DFT)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-of-dft-in-catalysis">Applications of DFT in Catalysis</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-dynamics-md">Molecular Dynamics (MD)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-of-md-in-catalysis">Applications of MD in Catalysis</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combined-dft-and-md-approaches">Combined DFT and MD Approaches</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-of-dft-and-md-combined-in-catalysis">Applications of DFT and MD Combined in Catalysis</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges-and-future-prospects">Challenges and Future Prospects</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Yavar
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Yavar.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
