@@ -1,6 +1,9 @@
 ===============================
-Basic Overview
+Basics Overview
 ===============================
+
+Introduction
+============
 
 Catalysis is a fundamental process in chemical reactions where a substance known as a **catalyst** accelerates the reaction rate without being consumed in the reaction itself. Catalysts are crucial for increasing the efficiency of chemical processes by lowering the energy barriers for reactions, thereby enabling faster reaction rates at lower temperatures and pressures. This is critical in many industrial, biological, and environmental processes.
 
@@ -48,42 +51,46 @@ The kinetics of catalysis can be described by several key parameters, which are 
 1. **Rate Law**: In catalysis, the rate of reaction is often modified by the presence of a catalyst. For a general reaction:
 
    .. math::
+
       A + B \rightarrow C
 
    The rate law for the catalyzed reaction is given by:
 
    .. math::
+
       r_{\text{cat}} = k_{\text{cat}} [A]^{m} [B]^{n}
 
    Where:
-   - \(r_{\text{cat}}\) = Reaction rate for the catalyzed reaction
-   - \(k_{\text{cat}}\) = Rate constant for the catalyzed reaction
-   - \([A]\), \([B]\) = Concentrations of reactants
-   - \(m\), \(n\) = Reaction orders with respect to reactants A and B
+   - :math:`r_{\text{cat}}` = Reaction rate for the catalyzed reaction
+   - :math:`k_{\text{cat}}` = Rate constant for the catalyzed reaction
+   - :math:`[A]`, :math:`[B]` = Concentrations of reactants
+   - :math:`m`, :math:`n` = Reaction orders with respect to reactants A and B
    
-2. **Activation Energy**: A catalyst lowers the activation energy (\(E_{\text{a}}\)) of the reaction, which increases the rate of reaction according to the Arrhenius equation:
+2. **Activation Energy**: A catalyst lowers the activation energy (:math:`E_{\text{a}}`) of the reaction, which increases the rate of reaction according to the Arrhenius equation:
 
    .. math::
+
       k_{\text{cat}} = A e^{-E_{\text{a, cat}} / RT}
 
    Where:
-   - \(k_{\text{cat}}\) = Rate constant for the catalyzed reaction
-   - \(A\) = Pre-exponential factor (frequency factor)
-   - \(E_{\text{a, cat}}\) = Activation energy of the catalyzed reaction
-   - \(R\) = Universal gas constant
-   - \(T\) = Temperature
+   - :math:`k_{\text{cat}}` = Rate constant for the catalyzed reaction
+   - :math:`A` = Pre-exponential factor (frequency factor)
+   - :math:`E_{\text{a, cat}}` = Activation energy of the catalyzed reaction
+   - :math:`R` = Universal gas constant
+   - :math:`T` = Temperature
    
    Lowering the activation energy increases the number of molecules that can overcome the energy barrier at a given temperature, thus increasing the rate.
 
 Turnover Concepts
 =================
 
-Turnover is a critical concept in catalysis, especially in measuring the efficiency and productivity of a catalyst. Two main terms are used: **Turnover Number** (TON) and **Turnover Frequency** (TOF).
+Turnover is a critical concept in catalysis, especially in measuring the efficiency and productivity of a catalyst. Two main terms are used: **Turnover Number (TON)** and **Turnover Frequency (TOF)**.
 
 1. **Turnover Number (TON)**:
    - The TON is defined as the number of moles of reactant converted per mole of catalyst before the catalyst becomes deactivated or consumed.
 
    .. math::
+
       \text{TON} = \frac{\text{Number of moles of product}}{\text{Number of moles of catalyst}}
 
    A higher TON indicates a more efficient catalyst, as it can facilitate a larger number of reactions before deactivation.
@@ -92,9 +99,10 @@ Turnover is a critical concept in catalysis, especially in measuring the efficie
    - TOF is a measure of the catalytic activity per unit time, representing how many catalytic cycles occur per unit time.
 
    .. math::
+
       \text{TOF} = \frac{\text{Number of catalytic cycles}}{\text{Time}}
 
-   TOF provides insight into the rate at which the catalyst operates. It is typically measured in units of \( \text{s}^{-1} \).
+   TOF provides insight into the rate at which the catalyst operates. It is typically measured in units of :math:`\text{s}^{-1}`.
 
 Catalytic Efficiency
 ====================
@@ -102,6 +110,7 @@ Catalytic Efficiency
 The overall efficiency of a catalyst can be described by the relationship between the catalyst's activity, the number of active sites, and how quickly the catalyst can perform its function. This is often expressed as the **specific activity**:
 
 .. math::
+
    \text{Specific Activity} = \frac{\text{Turnover Rate (TOF)}}{\text{Number of Active Sites}}
 
 Where the number of active sites refers to the total sites on the catalyst that are available for the reaction.
@@ -127,14 +136,15 @@ Enzymatic catalysis, performed by biological catalysts known as enzymes, follows
 The kinetics of enzyme-catalyzed reactions are often modeled using the **Michaelis-Menten equation**:
 
 .. math::
+
    v = \frac{V_{\max} [S]}{K_m + [S]}
 
 Where:
 
-- \(v\) = Initial rate of reaction
-- \(V_{\max}\) = Maximum rate of reaction at saturating substrate concentration
-- \([S]\) = Substrate concentration
-- \(K_m\) = Michaelis constant, representing the substrate concentration at which the reaction rate is half of \(V_{\max}\)
+- :math:`v` = Initial rate of reaction
+- :math:`V_{\max}` = Maximum rate of reaction at saturating substrate concentration
+- :math:`[S]` = Substrate concentration
+- :math:`K_m` = Michaelis constant, representing the substrate concentration at which the reaction rate is half of :math:`V_{\max}`
 
 This equation describes how the reaction rate depends on the substrate concentration and provides key insights into enzyme efficiency and affinity for the substrate.
 
